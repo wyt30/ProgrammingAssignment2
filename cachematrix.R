@@ -1,4 +1,4 @@
-## This R script file contains two functions, "makeCacheMatrix.R" and "cacheSOlve.R"
+## This R script file contains two functions, "makeCacheMatrix.R" and "cacheSolve.R"
 ## The objective of the R script is to calculate the inverse of a matrix, and to cache the inverse matrix
 ## such that the function can call the inverse of the matrix directly from the cache without needing to calculate it again.
 
@@ -18,7 +18,8 @@ makeCacheMatrix <- function(x = matrix()) {
   get <- function() x
   setinverse <- function(inverse) Inv <<- inverse
   getinverse <- function() Inv
-  list(set = set, get = get,
+  list(set = set, 
+       get = get,
        setinverse = setinverse,
        getinverse = getinverse)
 }
